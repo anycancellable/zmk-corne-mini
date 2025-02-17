@@ -159,14 +159,14 @@
     //
 
     macros {
-        macro_tab: macro_tab {
+        macroTabCustom: macro_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <>;
             label = "MACRO_TAB";
         };
 
-        macro_B: macro_B {
+        macroBCustom: macro_B {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
