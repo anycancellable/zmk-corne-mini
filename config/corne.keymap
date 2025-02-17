@@ -60,118 +60,13 @@
     combos {
         compatible = "zmk,combos";
 
-        escape {
-            bindings = <&kp ESCAPE>;
-            key-positions = <13 29>;
-        };
-
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <15 21>;
-        };
-
-        perc {
-            bindings = <&kp PERCENT>;
-            key-positions = <5 17>;
-        };
-
-        equal {
-            bindings = <&kp EQUAL>;
-            key-positions = <28 16>;
-        };
-
-        dollar {
-            bindings = <&kp DOLLAR>;
-            key-positions = <4 16>;
-        };
-
-        pound {
-            bindings = <&kp POUND>;
-            key-positions = <3 15>;
-        };
-
-        at {
-            bindings = <&kp AT>;
-            key-positions = <2 14>;
-        };
-
-        backslash {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <26 14>;
-        };
-
-        copy {
-            bindings = <&kp K_COPY>;
-            key-positions = <28 27>;
-        };
-
-        paste {
-            bindings = <&kp K_PASTE>;
-            key-positions = <26 27>;
-        };
-
-        star {
-            bindings = <&kp STAR>;
-            key-positions = <8 20>;
-        };
-
-        slash {
-            bindings = <&kp SLASH>;
-            key-positions = <32 20>;
-        };
-
-        plus {
-            bindings = <&kp PLUS>;
-            key-positions = <7 19>;
-        };
-
-        minus {
-            bindings = <&kp KP_MINUS>;
-            key-positions = <31 19>;
-        };
-
-        underscore {
-            bindings = <&kp UNDER>;
-            key-positions = <30 18>;
-        };
-
-        leftbrack {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <31 32>;
-        };
-
-        rightbrack {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <33 32>;
-        };
-
-        para-less {
-            bindings = <&paraless>;
-            key-positions = <20 19>;
-        };
-
-        para-great {
-            bindings = <&paragreat>;
-            key-positions = <20 21>;
+        combo_L_DB {
+            bindings = <&kp B>;
+            key-positions = <2 3>;
         };
     };
 
     //
-
-    macros {
-        macroBCustom: macro_B {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp B>,
-                <&macro_press>,
-                <&kp L &kp D>,
-                <&macro_release>,
-                <&kp B>;
-
-            label = "MACRO_B";
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -186,10 +81,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &kp B             &kp L        &kp D           &kp C        &kp V             &kp P    &kp F            &kp O       &kp U        &kp COMMA          &none
-&none  &hm N LEFT_SHIFT  &hm LCTRL R  &hm LEFT_ALT T  &hm LGUI S   &mt TAB G         &kp Y    &hm RGUI H       &hm RALT A  &hm RCTRL E  &hm I RIGHT_SHIFT  &none
-&none  &kp X             &kp Z        &kp M           &kp W        &kp J             &kp Q    &kp K            &kp COMMA   &kp SLASH    &kp PERIOD         &none
-                                      &none           &lt 1 SPACE  &sk LEFT_SHIFT    &kp RET  &lt 2 BACKSPACE  &none
+&none  &kp B        &kp L        &kp D           &kp C        &kp V             &kp P    &kp F            &kp O       &kp U        &kp COMMA    &none
+&none  &hm LSHFT N  &hm LCTRL R  &hm LEFT_ALT T  &hm LGUI S   &mt TAB G         &kp Y    &hm RGUI H       &hm RALT A  &hm RCTRL E  &hm RSHFT I  &none
+&none  &kp X        &kp Z        &kp M           &kp W        &kp J             &kp Q    &kp K            &kp COMMA   &kp SLASH    &kp PERIOD   &none
+                                 &none           &lt 1 SPACE  &sk LEFT_SHIFT    &kp RET  &lt 2 BACKSPACE  &none
             >;
         };
 
