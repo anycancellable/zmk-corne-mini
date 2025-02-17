@@ -158,6 +158,28 @@
 
     //
 
+    macros {
+        macro_tab: macro_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "MACRO_TAB";
+        };
+
+        macro_B: macro_B {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp B>,
+                <&macro_press>,
+                <&kp L &kp D>,
+                <&macro_release>,
+                <&kp B>;
+
+            label = "MACRO_B";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -171,10 +193,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &kp B  &kp L        &kp D           &kp C        &kp V    &kp P    &kp F            &kp O       &kp U        &kp COMMA   &none
-&none  &kp N  &hm LCTRL R  &hm LEFT_ALT T  &hm LGUI S   &kp G    &kp Y    &hm RGUI H       &hm RALT A  &hm RCTRL E  &kp I       &none
-&none  &kp X  &kp Z        &kp M           &kp W        &kp J    &kp Q    &kp K            &kp COMMA   &kp SLASH    &kp PERIOD  &none
-                           &none           &lt 1 SPACE  &mo 2    &kp RET  &lt 2 BACKSPACE  &none
+&none  &kp B             &kp L        &kp D           &kp C        &kp V             &kp P    &kp F            &kp O       &kp U        &kp COMMA          &none
+&none  &hm N LEFT_SHIFT  &hm LCTRL R  &hm LEFT_ALT T  &hm LGUI S   &mt TAB G         &kp Y    &hm RGUI H       &hm RALT A  &hm RCTRL E  &hm I RIGHT_SHIFT  &none
+&none  &kp X             &kp Z        &kp M           &kp W        &kp J             &kp Q    &kp K            &kp COMMA   &kp SLASH    &kp PERIOD         &none
+                                      &none           &lt 1 SPACE  &sk LEFT_SHIFT    &kp RET  &lt 2 BACKSPACE  &none
             >;
         };
 
@@ -188,10 +210,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &kp N1       &kp N2        &kp N3             &kp N4           &kp N5           &kp AMPERSAND  &kp DOUBLE_QUOTES   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON  &trans
-&trans  &hm LGUI N0  &hm LSHFT N4  &hm LALT UP_ARROW  &hm LCTRL DEL    &kp PAGE_UP      &kp PIPE       &kp COLON           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION   &trans
-&trans  &trans       &kp LEFT      &kp DOWN           &kp RIGHT_ARROW  &kp PAGE_DOWN    &kp TILDE      &kp LS(APOSTROPHE)  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none          &trans
-                                   &none              &trans           &kp SPACE        &kp RET        &trans              &trans
+&trans  &none            &kp LESS_THAN   &kp SLASH     &kp GREATER_THAN  &none        &kp AMPERSAND  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON  &trans
+&trans  &kp EXCLAMATION  &kp MINUS       &kp PLUS      &kp KP_EQUAL      &kp HASH     &kp PIPE       &kp COLON          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION   &trans
+&trans  &trans           &kp UNDERSCORE  &kp ASTERISK  &kp PERCENT       &none        &kp TILDE      &kp SQT            &kp LEFT_BRACE        &kp RIGHT_BRACE        &none          &trans
+                                         &none         &trans            &kp SPACE    &kp RET        &trans             &trans
             >;
         };
 
@@ -205,10 +227,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL  &kp AT          &kp HASH           &kp DLLR         &kp PRCNT    &kp PAGE_UP    &kp HOME  &kp UP_ARROW  &kp END    &none  &trans
-&trans  &trans    &trans          &hm LALT UP_ARROW  &hm LCTRL SQT    &kp GRAVE    &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &none  &trans
-&trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &none        &none          &none     &none         &none      &none  &trans
-                                  &kp LGUI           &trans           &kp SPACE    &kp RET        &trans    &trans
+&trans  &none   &none   &none   &none   &none        &kp PAGE_UP    &kp HOME  &kp UP_ARROW  &kp END    &none  &trans
+&trans  &trans  &trans  &trans  &none   &trans       &kp PAGE_DOWN  &kp LEFT  &kp DOWN      &kp RIGHT  &none  &trans
+&trans  &trans  &none   &none   &none   &none        &none          &none     &none         &none      &none  &trans
+                        &none   &trans  &kp SPACE    &kp RET        &trans    &trans
+            >;
+        };
+
+        NUM {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans           &trans
             >;
         };
 
@@ -228,7 +259,7 @@
 
         l3 {
             if-layers = <1 2>;
-            then-layer = <3>;
+            then-layer = <4>;
         };
     };
 };
