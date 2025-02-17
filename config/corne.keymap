@@ -67,7 +67,7 @@
 
         tabCombo {
             bindings = <&kp TAB>;
-            key-positions = <15 16>;
+            key-positions = <19 20>;
         };
 
         shiftCombo {
