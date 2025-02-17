@@ -64,6 +64,16 @@
             bindings = <&kp B>;
             key-positions = <2 3>;
         };
+
+        tabCombo {
+            bindings = <&kp TAB>;
+            key-positions = <15 16>;
+        };
+
+        shiftCombo {
+            bindings = <&sk LSHFT>;
+            key-positions = <38 39>;
+        };
     };
 
     //
@@ -81,10 +91,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &kp B        &kp L        &kp D           &kp C        &kp V             &kp P    &kp F            &kp O       &kp U        &kp COMMA    &none
-&none  &hm LSHFT N  &hm LCTRL R  &hm LEFT_ALT T  &hm LGUI S   &mt TAB G         &kp Y    &hm RGUI H       &hm RALT A  &hm RCTRL E  &hm RSHFT I  &none
-&none  &kp X        &kp Z        &kp M           &kp W        &kp J             &kp Q    &kp K            &kp COMMA   &kp SLASH    &kp PERIOD   &none
-                                 &none           &lt 1 SPACE  &sk LEFT_SHIFT    &kp RET  &lt 2 BACKSPACE  &none
+&none  &kp B        &kp L        &kp D           &kp C        &kp V    &kp P    &kp F            &kp O       &kp U        &kp COMMA    &none
+&none  &hm LSHFT N  &hm LCTRL R  &hm LEFT_ALT T  &hm LGUI S   &kp G    &kp Y    &hm RGUI H       &hm RALT A  &hm RCTRL E  &hm RSHFT I  &none
+&none  &kp X        &kp Z        &kp M           &kp W        &kp J    &kp Q    &kp K            &kp COMMA   &kp SLASH    &kp PERIOD   &none
+                                 &none           &lt 1 SPACE  &mo 3    &kp RET  &lt 2 BACKSPACE  &none
             >;
         };
 
