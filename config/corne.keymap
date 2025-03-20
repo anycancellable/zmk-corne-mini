@@ -81,8 +81,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        DEF {
-            display-name = "Base";
+        Base {
+            display-name = "BASE";
 
             // -----------------------------------------------------------------------------------------
             // |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
@@ -99,7 +99,7 @@
         };
 
         SYM {
-            display-name = "Nav";
+            display-name = "SYM";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -116,7 +116,7 @@
         };
 
         NAV {
-            display-name = "Sym";
+            display-name = "NAV";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
@@ -139,6 +139,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
                         &trans  &trans  &trans    &trans  &kp KP_NUMBER_0  &trans
             >;
+
+            label = "NUM";
         };
 
         ADJ {
