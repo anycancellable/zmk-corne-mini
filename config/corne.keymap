@@ -97,9 +97,9 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&none  &kp B        &kp L        &kp D           &kp C        &kp V        &kp P    &kp F            &kp O       &kp U        &trans        &none
-&none  &hm LSHFT N  &hm LCTRL R  &hm LEFT_ALT T  &hm LGUI S   &kp G        &kp Y    &hm RGUI H       &hm RALT A  &hm RCTRL E  &hm RSHFT I   &none
-&none  &kp X        &kp Z        &kp M           &kp W        &kp J        &kp Q    &kp K            &kp KP_DOT  &kp COMMA    &kp KP_SLASH  &none
+&none  &kp B        &kp L        &kp D           &kp C        &kp V        &kp P    &kp F            &kp O       &kp U         &trans        &none
+&none  &hm LSHFT N  &hm LCTRL R  &hm LEFT_ALT T  &hm LGUI S   &kp G        &kp Y    &hm RGUI H       &hm RALT A  &hm RCTRL E   &hm RSHFT I   &none
+&none  &kp X        &kp Z        &kp M           &kp W        &kp J        &kp Q    &kp K            &kp KP_DOT  &kp KP_COMMA  &kp KP_SLASH  &none
                                  &kp ESCAPE      &lt 1 SPACE  &lt 3 TAB    &kp RET  &lt 2 BACKSPACE  &none
             >;
         };
@@ -114,7 +114,7 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &kp KP_COMMA     &kp LESS_THAN   &kp SLASH     &kp GREATER_THAN  &kp AT_SIGN    &kp AMPERSAND  &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON  &trans
+&trans  &trans           &kp LESS_THAN   &kp SLASH     &kp GREATER_THAN  &kp AT_SIGN    &kp AMPERSAND  &kp DOUBLE_QUOTES  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SEMICOLON  &trans
 &trans  &kp EXCLAMATION  &kp KP_MINUS    &kp PLUS      &kp KP_EQUAL      &kp HASH       &kp PIPE       &kp COLON          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION   &trans
 &trans  &kp GRAVE        &kp UNDERSCORE  &kp ASTERISK  &kp PERCENT       &kp DOLLAR     &kp TILDE      &kp SQT            &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none          &trans
                                          &none         &trans            &kp SPACE      &kp RET        &trans             &trans
