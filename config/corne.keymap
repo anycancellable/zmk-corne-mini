@@ -24,6 +24,19 @@
             global-quick-tap;
         };
 
+        hm_250: homerow_mods_250 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_250";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+
+            quick-tap-ms = <180>;
+            global-quick-tap;
+        };
+
         para: para {
             compatible = "zmk,behavior-tap-dance";
             label = "PARA";
@@ -82,7 +95,7 @@
 
             bindings = <
 &none  &kp B        &kp L        &kp D           &kp C        &kp V        &kp P    &kp F            &kp O       &kp U        &trans       &none
-&none  &hm LSHFT N 250  &hm LCTRL R  &hm LEFT_ALT T  &hm LGUI S   &kp G        &kp Y    &hm RGUI H       &hm RALT A  &hm RCTRL E  &hm RSHFT I 250  &none
+&none  &hm_250 LSHFT N  &hm LCTRL R  &hm LEFT_ALT T  &hm LGUI S   &kp G        &kp Y    &hm RGUI H       &hm RALT A  &hm RCTRL E  &hm_250 RSHFT I  &none
 &none  &kp X        &kp Z        &kp M           &kp W        &kp J        &kp Q    &kp K            &kp COMMA   &kp DOT      &kp SLASH    &none
                                  &kp ESCAPE      &lt 1 SPACE  &lt 3 TAB    &kp RET  &lt 2 BACKSPACE  &none
             >;
